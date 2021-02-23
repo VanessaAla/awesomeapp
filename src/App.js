@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Title from "./components/Title";
-import Pokemon from "./components/Pokemon"
+import Pokemon from "./components/Pokemon/Pokemon"
 
 const all_pokemon = [
   {

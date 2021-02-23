@@ -2,15 +2,23 @@ import React from "react";
 
 export default function Pokemon(props) {
   return (
-    <div>
-      <h2>Pokemon name: {props.name}</h2>
-      <p>Weight: {props.weight}</p>
-      <p>Awesome: {props.awesome ? "YES!" : "nope, not really"}</p>
-      <p>Terrifying: {props.terrifying ? "Very" : "nah, lovable"}</p>
-      <p>Abilities:</p>
-      <ul>
+    <div className="card">
+      <div className="card-body">
+        <h5 className="card-title">{props.name}</h5>
+        <h6 className="card-subtitle">
+          {props.awesome ? "An awesome Pokemon" : "Not awesome"}
+        </h6>
+        <p>
+          Weight: {props.weight} kg
+          <br />
+          Terrifying: {props.terrifying ? "Very" : "nah, lovable"}
+          <br />
+          {props.abilities.length} abilities
+        </p>
+      </div>
+      <ul className="list-group list-group-flush">
         {props.abilities.map(ability => {
-          return <li>{ability}</li>;
+          return <li className="list-group-item">{ability}</li>;
         })}
       </ul>
     </div>

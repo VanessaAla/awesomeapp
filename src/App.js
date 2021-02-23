@@ -37,6 +37,8 @@ const all_pokemon = [
 
 function App() {
   return (
+    <main className="container">
+      <Title content="Some Simple Title" />
     <div className="App">
       <div className="row">
         {all_pokemon.map(pokemon => (
@@ -66,6 +68,7 @@ function App() {
            </a>
       </header>
     </div>
+    </main>
   );
 }
 
